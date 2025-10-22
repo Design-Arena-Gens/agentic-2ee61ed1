@@ -1,0 +1,25 @@
+:root{ --bg:#0b0c10; --fg:#e5e7eb; --muted:#9ca3af; --primary:#22c55e; --card:#111827; --border:#1f2937; }
+*{box-sizing:border-box}
+html,body{padding:0;margin:0;background:var(--bg);color:var(--fg);font-family:ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial}
+.container{max-width:1100px;margin:0 auto;padding:24px}
+.header{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(11,12,16,.8);backdrop-filter:blur(10px);z-index:50}
+.brand{display:flex;gap:10px;align-items:center;font-weight:700}
+.brand .logo{width:28px;height:28px;border-radius:6px;background:linear-gradient(135deg,#22c55e,#065f46)}
+.nav a{color:var(--fg);text-decoration:none;margin-left:16px}
+h1{font-size:28px;margin:24px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:8px}
+.price{color:var(--muted)}
+.button{background:var(--primary);color:#052e16;border:none;padding:10px 14px;border-radius:8px;cursor:pointer;font-weight:600;text-decoration:none;display:inline-block}
+.button:disabled{opacity:.6;cursor:not-allowed}
+.link{background:none;border:none;color:#60a5fa;cursor:pointer}
+.footer{border-top:1px solid var(--border);margin-top:40px;padding:24px;text-align:center;color:var(--muted)}
+.cart .cartRow{display:grid;grid-template-columns:1fr auto auto;gap:12px;align-items:center;border-bottom:1px solid var(--border);padding:12px 0}
+.cart .cartQty{display:flex;gap:8px;align-items:center}
+.cart input{width:64px;padding:6px;border-radius:6px;border:1px solid var(--border);background:#0a0f1a;color:var(--fg)}
+.cartSummary{display:flex;align-items:center;justify-content:space-between;padding-top:12px}
+.checkout{display:grid;grid-template-columns:2fr 1fr;gap:20px}
+.form{display:flex;flex-direction:column;gap:12px}
+label{display:flex;flex-direction:column;gap:6px}
+input,textarea{padding:10px;border-radius:8px;border:1px solid var(--border);background:#0a0f1a;color:var(--fg)}
+@media(max-width:900px){.checkout{grid-template-columns:1fr}}
